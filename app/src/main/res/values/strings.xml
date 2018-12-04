@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SB-AS_meet2</string>
+
+    <string name="next_act_main"><![CDATA[Next Act -> Main]]></string>
+    <string name="prev_act_splash"><![CDATA[Splash <- Prev act]]></string>
+    <string name="next_act_detail"><![CDATA[Next Act -> Detail]]></string>
+    <string name="prev_act_main"><![CDATA[Main <- Prev act]]></string>
+    <string name="next_act_info"><![CDATA[Next Act -> Info]]></string>
+    <string name="prev_act_detail"><![CDATA[Detail <- Prev Act]]></string>
+
+    <string name="splash_data">Data from splash</string>
+    <string name="main_data">Data from main</string>
+    <string name="detail_data">Data from detail</string>
+    <string name="info_data">Data from info</string>
+
+    <string name="splash_data_key">asmeet2.splash_shared_data</string>
+    <string name="main_data_key">asmeet2.main_shared_data</string>
+    <string name="detail_data_key">asmeet2.detail_shared_data</string>
+    <string name="info_data_key">asmeet2.info_shared_data</string>
+</resources>
