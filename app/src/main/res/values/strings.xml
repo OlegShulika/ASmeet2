@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SB-AS_meet2</string>
+    <string name="app_name">AS-meet2</string>
 
     <string name="next_act_main"><![CDATA[Next Act -> Main]]></string>
     <string name="prev_act_splash"><![CDATA[Splash <- Prev act]]></string>
