@@ -47,16 +47,15 @@ public class InfoActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         Log.d(TAG, this.getLocalClassName()+" onBackPressed");
         Intent data = saveSharedData(getString(R.string.detail_data_key));
         setResult(RESULT_OK, data);
-        finish();
+        //finish();
+        onNavigateUp();
     }
 
     private Intent saveSharedData (String key) {

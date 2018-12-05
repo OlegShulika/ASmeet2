@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         Log.d(TAG, this.getLocalClassName()+" onBackPressed");
         Intent data = saveSharedData(getString(R.string.splash_data_key));
         setResult(RESULT_OK, data);
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+        //super.onActivityResult(requestCode, resultCode, data);
         Log.d(TAG, this.getLocalClassName()+" onActivityResult, req="+requestCode+" res="+resultCode+" data="+data);
         if (requestCode==REQUEST_CODE_DETAIL){
             if (data==null)

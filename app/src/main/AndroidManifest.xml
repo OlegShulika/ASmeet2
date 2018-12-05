@@ -30,7 +30,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DetailActivity" />
-        <activity android:name=".InfoActivity" />
+        <activity android:name=".InfoActivity"
+            android:parentActivityName=".SplashActivity" />
     </application>
 
 </manifest>
