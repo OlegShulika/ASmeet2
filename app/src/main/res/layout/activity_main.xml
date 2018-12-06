@@ -3,26 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
+    android:layout_marginLeft="@dimen/common_margin"
+    android:layout_marginRight="@dimen/common_margin"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="@dimen/button_margin">
         <Button
             android:id="@+id/main_button_Prev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
             android:text="@string/prev_act_splash" />
 
         <Button
             android:id="@+id/main_button_Next"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
+            android:layout_marginRight="@dimen/common_margin"
             android:text="@string/next_act_detail" />
     </LinearLayout>
 

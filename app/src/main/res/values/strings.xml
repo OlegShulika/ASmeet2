@@ -6,7 +6,7 @@
     <string name="next_act_detail"><![CDATA[Next Act -> Detail]]></string>
     <string name="prev_act_main"><![CDATA[Main <- Prev act]]></string>
     <string name="next_act_info"><![CDATA[Next Act -> Info]]></string>
-    <string name="prev_act_detail"><![CDATA[Detail <- Prev Act]]></string>
+    <string name="prev_act_detail"><![CDATA[Splash <<<- Prev Act]]></string>
 
     <string name="splash_data">Data from splash</string>
     <string name="main_data">Data from main</string>

@@ -42,9 +42,10 @@ public class InfoActivity extends AppCompatActivity {
         mPrevActButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent data = saveSharedData(getString(R.string.detail_data_key));
+                Intent data = saveSharedData(getString(R.string.splash_data_key));
                 setResult(RESULT_OK, data);
-                finish();
+                //finish();
+                onNavigateUp();
             }
         });
     }
@@ -52,7 +53,7 @@ public class InfoActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Log.d(TAG, this.getLocalClassName()+" onBackPressed");
-        Intent data = saveSharedData(getString(R.string.detail_data_key));
+        Intent data = saveSharedData(getString(R.string.splash_data_key));
         setResult(RESULT_OK, data);
         //finish();
         onNavigateUp();

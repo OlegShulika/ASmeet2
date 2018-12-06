@@ -20,6 +20,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         initViews();
+        initExtra();
         initListeners();
         Log.d(TAG, this.getLocalClassName()+" onCreate");
     }
@@ -29,6 +30,14 @@ public class SplashActivity extends AppCompatActivity {
         mSplashDataText = findViewById((R.id.splash_textView));
         mSplashDataText.setText("/"+TAG);
         this.setTitle(getString(R.string.app_name)+"---"+TAG);
+    }
+
+    void initExtra() {
+        String newText = getIntent().getStringExtra(getString(R.string.splash_data_key));
+        Log.d(TAG, "load EXTRA "+newText);
+
+        if (newText!=null)
+            mSplashDataText.setText(newText+"/"+TAG);
     }
 
     private void initListeners(){

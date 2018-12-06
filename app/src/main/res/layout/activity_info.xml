@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="24dp"
+    android:layout_marginLeft="@dimen/common_margin"
 
     tools:context=".InfoActivity">
 
@@ -14,8 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_marginTop="@dimen/button_margin"
         android:text="@string/prev_act_detail" />
 
 
@@ -23,12 +23,10 @@
         android:id="@+id/info_textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/info_button_Prev"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="@dimen/data_text_height"
+        android:layout_marginRight="@dimen/common_margin"
         android:text="@string/splash_data" />
-
-
-
 
 </RelativeLayout>
