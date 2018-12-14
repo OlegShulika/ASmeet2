@@ -20,7 +20,7 @@ public class InfoActivity extends AppCompatActivity {
         initViews();
         initExtra();
         initListeners();
-        Log.d(TAG, this.getLocalClassName()+" onCreate");
+        Log.d(TAG, " onCreate");
     }
 
     void initViews(){
@@ -44,7 +44,6 @@ public class InfoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent data = saveSharedData(getString(R.string.splash_data_key));
                 setResult(RESULT_OK, data);
-                //finish();
                 onNavigateUp();
             }
         });
@@ -55,7 +54,6 @@ public class InfoActivity extends AppCompatActivity {
         Log.d(TAG, this.getLocalClassName()+" onBackPressed");
         Intent data = saveSharedData(getString(R.string.splash_data_key));
         setResult(RESULT_OK, data);
-        //finish();
         onNavigateUp();
     }
 
@@ -70,31 +68,31 @@ public class InfoActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, this.getLocalClassName()+" onStart");
+        Log.d(TAG, " onStart");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, this.getLocalClassName()+" onResume");
+        Log.d(TAG, " onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, this.getLocalClassName()+" onPause");
+        Log.d(TAG, " onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, this.getLocalClassName()+" onStop");
+        Log.d(TAG, " onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, this.getLocalClassName()+" onDestroy");
+        Log.d(TAG, " onDestroy");
     }
 
 }

@@ -1,5 +1,6 @@
 package ru.olegshulika.asmeet2;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -20,9 +21,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         initViews();
-        initExtra();
         initListeners();
-        Log.d(TAG, this.getLocalClassName()+" onCreate");
+        Log.d(TAG, " onCreate");
     }
 
     private void initViews(){
@@ -44,13 +44,18 @@ public class SplashActivity extends AppCompatActivity {
         mNextActButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startMain = new Intent(SplashActivity.this, MainActivity.class);
-                String savedText = mSplashDataText.getText().toString();
-                Log.d(TAG, "save EXTRA "+savedText);
-                startMain.putExtra(getString(R.string.main_data_key), savedText);
+                Intent startMain = newIntent(SplashActivity.this, MainActivity.class,
+                        getString(R.string.main_data_key), mSplashDataText.getText().toString());
                 startActivityForResult(startMain, REQUEST_CODE_MAIN);
             }
         });
+    }
+
+    public static final Intent newIntent (Context context, Class<?> cls, String key, String extra){
+        Intent intent = new Intent(context, cls);
+        Log.d(TAG, "save EXTRA "+extra);
+        intent.putExtra(key, extra);
+        return intent;
     }
 
     @Override
@@ -69,30 +74,31 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Log.d(TAG, this.getLocalClassName()+" onStart");
+        Log.d(TAG, " onStart");
     }
 
     @Override
     protected void onResume() {
+        initExtra();
         super.onResume();
-        Log.d(TAG, this.getLocalClassName()+" onResume");
+        Log.d(TAG, " onResume");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, this.getLocalClassName()+" onPause");
+        Log.d(TAG, " onPause");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, this.getLocalClassName()+" onStop");
+        Log.d(TAG, " onStop");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, this.getLocalClassName()+" onDestroy");
+        Log.d(TAG, " onDestroy");
     }
 }
